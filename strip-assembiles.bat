@@ -35,4 +35,7 @@ set outPath=%~dp0\package\lib
 ))
 
 del "%outPath%\System*" /q
+del "%outPath%\netstandard.dll" /q
+del "%outPath%\mscorlib.dll" /q
+del "%outPath%\Microsoft.NET.StringTools.dll" /q
 pause
