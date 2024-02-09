@@ -22,16 +22,17 @@ set outPath=%~dp0\package\lib
 
 @REM Strip and publicize assemblies from toPublicize.
 (for %%a in (%toPublicize%) do (
-  echo a: %%a
+  echo striping: %%a
 
   %~dp0\tools\NStrip.exe "%managedPath%\%%a" -o "%outPath%\%%a" -cg -p --cg-exclude-events
 ))
 
 @REM Copy over original assemblies for ones we don't want to touch.
 (for %%a in (%dontTouch%) do (
-  echo a: %%a
+  echo copying: %%a
 
   xcopy "%managedPath%\%%a" "%outPath%\%%a" /y /v
 ))
 
+del "%outPath%\System*" /q
 pause
