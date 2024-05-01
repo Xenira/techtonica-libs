@@ -4,7 +4,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 
     <!-- Version of your nuget package. Should reflect the game version where the libs come from. -->
-    <version>0.3.0-e</version>
+    <version>0.4.0-c</version>
 
     <!-- The GitHub workflow will automatically populate these. -->
     <id>$name$</id>
